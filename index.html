@@ -1,51 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <!-- Main CSS File -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- Google Fonts -->
-    Open Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Open Sans  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Roboto Slab -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/8e4fb64db4.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
-    <form id="container">
+    <script
+      src="https://kit.fontawesome.com/8e4fb64db4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <form id="form">
+      <div><img src="./images/badge.png" alt="badge" /></div>
 
-        <div><img src="./images/badge.png" alt="badge"></div>
+      <h2>
+        Kogi State <br />
+        Polytechnic
+      </h2>
 
-        <h2>Kogi State <br>
-             Polytechnic
-        </h2>
+      <div class="form-control">
+        <i class="fa-solid fa-user"></i>
+        <input
+          type="text"
+          name="username"
+          placeholder="Username/Matric No"
+          required
+        />
+      </div>
 
-        <div class="form-control">
-            <i class="fa-solid fa-user"></i>
-            <input type="text" name="fname" placeholder="Username/Matric_no" required>
+      <div class="form-control">
+        <i class="fa-solid fa-lock"></i>
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+      </div>
+
+      <div id="remember">
+        <div class="form-control check">
+          <input type="checkbox" name="remember" />
         </div>
+        <span>Remember Me</span>
+      </div>
 
-        <div class="form-control">
-            <i class="fa-solid fa-lock"></i>
-            <input type="password" name="fname" placeholder="Password" required>
-        </div>
-
-        <div id="remember">
-            <div class="form-control check"><input type="checkbox" name="remember"></div>
-            <span>Remember Me</span>
-        </div>
-        
-        
-        <button type="submit">Login</button>
-
+      <button type="submit">Login</button>
     </form>
+  </body>
 
-</body>
+  <script>
+    // clear form on submit and show alert
+    const form = document.getElementById("form");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const username = formData.get("username");
+      const password = formData.get("password");
+      const remember = formData.get("remember");
+
+      alert(`Login successful!\nUsername: ${username}`);
+      form.reset();
+    });
+  </script>
 </html>

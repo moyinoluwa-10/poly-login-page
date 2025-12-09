@@ -1,145 +1,146 @@
 /* Styling Page */
 body {
-    padding: 0;
-    margin: 0;
-    background-image: url(./images/grass-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-image: url(./images/grass-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
 /* Styling Form */
 form {
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 65%;
-    max-width: 100%;
-    padding: 40px 150px;
-    margin: 100px auto;
-    text-align: center;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 65%;
+  max-width: 100%;
+  padding: 40px 150px;
+  margin: 100px auto;
+  text-align: center;
 }
 
 /* Styling Form-Top */
 img {
-    margin-top: 70px;
+  margin-top: 70px;
 }
 
 h2 {
-    font-size: 45px;
-    margin-bottom: 70px;
-    font-family: 'Roboto Slab', serif;
+  font-size: 45px;
+  margin-bottom: 70px;
+  font-family: "Roboto Slab", serif;
 }
 
 br {
-    display: none;
+  display: none;
 }
 
 /* Styling Input */
 .form-control {
-    position: relative;
+  position: relative;
 }
 
 i {
-    position: absolute;
-    font-size: 20px;
-    margin-top: 11px;
-    margin-left: 50px;
-    padding-right: 10px;
-    border-right: 2px solid white
+  position: absolute;
+  font-size: 20px;
+  margin-top: 11px;
+  margin-left: 50px;
+  padding-right: 10px;
+  border-right: 2px solid white;
 }
 
-input[type=text], input[type=password] {
-    box-sizing: border-box;
-    width: 100%;
-    height: 50px;
-    border: none;
-    border-bottom: 3px solid #3f5829;
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.25);
-    color: white;
-    font-size: 19px;
-    margin-bottom: 30px;
-    padding: 5px 20px 5px 100px;
+input[type="text"],
+input[type="password"] {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 3px solid #3f5829;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+  font-size: 19px;
+  margin-bottom: 30px;
+  padding: 5px 20px 5px 100px;
 }
 
 ::placeholder {
-    color: white;
-    opacity: 0.5;
+  color: white;
+  opacity: 0.5;
 }
 
 /* Styling Checkbox */
 #remember {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
-.check{ 
-    display: inline-block;
+.check {
+  display: inline-block;
 }
 
-input[type=checkbox] {
-    font-size: 200px ;
-    width:16px;
-    height: 16px;
-    margin-right: 10px;
-    cursor: pointer;
-    outline: none;
+input[type="checkbox"] {
+  font-size: 200px;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  outline: none;
 }
 
 span {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 /* Styling Button */
 button {
-    background-color: #2596be;
-    color: white;
-    margin: 10px auto 10px auto;
-    width: 60%;
-    padding: 10px 20px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 18px;
+  background-color: #2596be;
+  color: white;
+  margin: 10px auto 10px auto;
+  width: 60%;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 button:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    color: #2596be;
-    letter-spacing: 5px;
-    transition: linear 0.7s;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #2596be;
+  letter-spacing: 5px;
+  transition: linear 0.7s;
 }
 
 /* Responsiveness */
-@media screen and (max-width:980px) and (min-width:650px) {
-    form {
-        padding: 40px 50px;
-    }
-   
+@media screen and (max-width: 980px) and (min-width: 650px) {
+  form {
+    padding: 40px 50px;
+  }
 }
 
-@media screen and (max-width:650px) and (min-width:465px) {
-    form {
-        width: 90%;
-        padding: 40px 50px;
-    }
-   
+@media screen and (max-width: 650px) and (min-width: 465px) {
+  form {
+    width: 90%;
+    padding: 40px 50px;
+  }
 }
 
+@media screen and (max-width: 465px) {
+  form {
+    width: 90%;
+    padding: 30px 30px;
+  }
 
-@media screen and (max-width:465px) {
-    form {
-        width: 90%;
-        padding: 30px 30px;
-    }
-   
-    i {
-        margin-left: 10px;
-    }
+  i {
+    margin-left: 10px;
+  }
 
-    input[type=text], input[type=password] {
-        padding: 5px 20px 5px 45px;
-    }
-   
+  input[type="text"],
+  input[type="password"] {
+    padding: 5px 20px 5px 45px;
+  }
 }
